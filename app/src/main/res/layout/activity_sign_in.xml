@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Sign_In_Activity">
+
+
+    <Button
+        android:id="@+id/Landing_btn_Sign_In"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:text="@string/Sign_In_Btn"
+        android:background="@drawable/bg_btn"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_Sign_In_TextEdit" />
+
+    <TextView
+        android:id="@+id/Welcome_Paragraph_One"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="@string/welcomeB_text"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Application_Logo" />
+
+    <ImageView
+        android:id="@+id/Application_Logo"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_edtext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Application_Name"
+        app:srcCompat="@drawable/doctor512px" />
+
+    <TextView
+        android:id="@+id/Application_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/app_name"
+        android:textColor="@color/heading"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email_Sign_In_TextEdit"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_edtext"
+        android:drawableLeft="@drawable/ic_user"
+        android:drawablePadding="10dp"
+        android:elevation="5dp"
+        android:paddingLeft="35dp"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome_Paragraph_One" />
+
+    <EditText
+        android:id="@+id/password_Sign_In_TextEdit"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_edtext"
+        android:drawableLeft="@drawable/ic_pass"
+        android:drawablePadding="10dp"
+        android:elevation="5dp"
+        android:paddingLeft="35dp"
+        android:ems="10"
+        android:hint="Password"
+        android:textAlignment="center"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_Sign_In_TextEdit" />
+</androidx.constraintlayout.widget.ConstraintLayout>

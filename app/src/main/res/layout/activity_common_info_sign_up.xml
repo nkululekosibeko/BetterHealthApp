@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Common_Info_SignUP_Activity">
+
+
+    <Button
+        android:id="@+id/Next_btn_Sign_Up"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:text="@string/Sign_Up_Next_Btn"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.572" />
+
+    <TextView
+        android:id="@+id/Application_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/app_name"
+        android:textColor="@color/heading"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Sign_Up_Common_Welcome_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/Sign_up_Common_Welcome"
+        android:textColor="@color/heading"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Application_Name" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="375dp"
+        android:layout_height="570dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sign_Up_Common_Welcome_Text">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/fName_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="First Name"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/mName_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Middle Name"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/lName_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Last Name"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/DOB_btn_Sign_Up"
+                android:layout_width="225dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/Sign_Up_DOB_btn"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/ID.No_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Identity Number"
+                android:textAlignment="center"/>
+
+            <!-- Gender -->
+            <RadioGroup
+                android:id="@+id/gender_RadioG_Sign_UP"
+                android:layout_width="351dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/M_gender_RadioG_Sign_UP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="75dp"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/F_gender_RadioG_Sign_UP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="50dp"
+                    android:text="Female" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/Contact.No_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Contact Number"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/email_Sign_Up_TextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:inputType="textEmailAddress"
+                android:hint="Email Address"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/password_Sign_Up_TextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/confirm_password_Sign_Up_TextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:inputType="textPassword"
+                android:hint="Confirm Password"
+                android:textAlignment="center"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

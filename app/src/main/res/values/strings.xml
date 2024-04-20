@@ -17,11 +17,23 @@
     </string>
     <string name="welcome_text_Three.4">
         🐣   Your health, simplified
+    </string><string name="welcomeB_text">
+        Welcome Back !!!
     </string>
     <string name="Sign_In_Btn">
         Sign In
     </string>
     <string name="Sign_Up_Btn">
         Sign Up
+    </string>
+    <string name="Sign_Up_Next_Btn">
+        Next
+    </string>
+    <string name="Sign_Up_DOB_btn">
+        Date of Birth
+    </string>
+
+    <string name="Sign_up_Common_Welcome">
+        Welcome New User
     </string>
 </resources>
