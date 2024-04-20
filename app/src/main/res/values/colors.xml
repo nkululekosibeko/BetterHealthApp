@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="heading">#263238</color>
+    <color name="Paragraph">#263238</color>
+    <color name="background">#CFD8DC</color>
+
+    <color name="Accent">#FF7043</color>
+    <color name="Subheading">#546E7A</color>
+    <color name="Button">#4CAF50</color>
+    <color name="Highlight">#FFEB3B</color>
+    <color name="Border">#78909C</color>
+
+</resources>

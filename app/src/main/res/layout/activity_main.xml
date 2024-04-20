@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/Landing_btn_Sign_In"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:text="@string/Sign_In_Btn"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome_Paragraph_Two"
+        app:layout_constraintVertical_bias="0.742" />
+
+    <TextView
+        android:id="@+id/Welcome_Paragraph_Three.4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text_Three.4"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome_Paragraph_Two"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <TextView
+        android:id="@+id/Welcome_Paragraph_Three.3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text_Three.3"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome_Paragraph_Two"
+        app:layout_constraintVertical_bias="0.206" />
+
+    <TextView
+        android:id="@+id/Welcome_Paragraph_Three.2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text_Three.2"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome_Paragraph_Two"
+        app:layout_constraintVertical_bias="0.113" />
+
+    <TextView
+        android:id="@+id/Application_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <ImageView
+        android:id="@+id/Application_Logo"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Application_Name"
+        app:layout_constraintVertical_bias="0.049"
+        app:srcCompat="@drawable/doctor512px" />
+
+    <TextView
+        android:id="@+id/Welcome_Paragraph_One"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text_One"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Application_Logo"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <TextView
+        android:id="@+id/Welcome_Paragraph_Two"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/welcome_text_Two"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome_Paragraph_One"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Welcome_Paragraph_Three.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text_Three.1"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome_Paragraph_Two"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <Button
+        android:id="@+id/Landing_btn_Sign_Up"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Sign_Up_Btn"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome_Paragraph_Two"
+        app:layout_constraintVertical_bias="0.547" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

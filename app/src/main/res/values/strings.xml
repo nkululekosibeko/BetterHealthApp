@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Better Health 😁</string>
+    <string name="welcome_text_One">
+        <h4>Welcome to</h4>
+    </string>
+    <string name="welcome_text_Two">
+        your Healthcare Companion!
+    </string>
+    <string name="welcome_text_Three.1">
+        🗓️  Schedule appointments
+    </string>
+    <string name="welcome_text_Three.2">
+        💠   Access info
+    </string>
+    <string name="welcome_text_Three.3">
+        🩹   Stay healthy effortlessly
+    </string>
+    <string name="welcome_text_Three.4">
+        🐣   Your health, simplified
+    </string>
+    <string name="Sign_In_Btn">
+        Sign In
+    </string>
+    <string name="Sign_Up_Btn">
+        Sign Up
+    </string>
+</resources>
