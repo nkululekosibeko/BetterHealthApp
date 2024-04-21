@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Paramedic_Sign_Up_Activity">
+
+
+    <Button
+        android:id="@+id/PM_btn_Sign_In"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_btn"
+        android:text="@string/Sign_In_Btn"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:layout_constraintVertical_bias="0.185" />
+
+    <TextView
+        android:id="@+id/Sign_Up_Common_Welcome_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/Paramedic_Str"
+        android:textColor="@color/heading"
+        android:textSize="25dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Application_Name" />
+
+    <TextView
+        android:id="@+id/Application_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/app_name"
+        android:textColor="@color/heading"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="383dp"
+        android:layout_height="658dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/ScrollBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sign_Up_Common_Welcome_Text">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ProfessionalPMedic_Info_Sign_Up"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="5dp"
+                android:text="Profesional Information"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/EmployeeNo_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:background="@drawable/bg_edtext"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:paddingLeft="35dp"
+                android:inputType="text"
+                android:hint="Employee Number"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/JobTittlePM_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:background="@drawable/bg_edtext"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:paddingLeft="35dp"
+                android:inputType="text"
+                android:hint="Job Tittle"
+                android:textAlignment="center"/>
+
+
+            <TextView
+                android:id="@+id/MedicalBackground_Info_Sign_Up"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="5dp"
+                android:text="Medical Background"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/MedSchoolAttendedPM_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:background="@drawable/bg_edtext"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:paddingLeft="35dp"
+                android:inputType="text"
+                android:hint="Medical School Attended"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/ResidecyTrainingPM_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:background="@drawable/bg_edtext"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:paddingLeft="35dp"
+                android:inputType="text"
+                android:hint="Residency Training"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/BoardCertificatesPM_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:background="@drawable/bg_edtext"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:paddingLeft="35dp"
+                android:inputType="text"
+                android:hint="Board Certificates"
+                android:textAlignment="center"/>
+
+
+
+            <TextView
+                android:id="@+id/YearsWorkPM_Info_Sign_Up"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="5dp"
+                android:text="Knowledge of the Field"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/ExperiencePM_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:background="@drawable/bg_edtext"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:paddingLeft="35dp"
+                android:inputType="text"
+                android:hint="Years"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/Previous_PositionPM_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:background="@drawable/bg_edtext"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:paddingLeft="35dp"
+                android:inputType="text"
+                android:hint="Previous Position"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/AreaOfInterestPM_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:background="@drawable/bg_edtext"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:paddingLeft="35dp"
+                android:inputType="text"
+                android:hint="Area of Interest"
+                android:textAlignment="center"/>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

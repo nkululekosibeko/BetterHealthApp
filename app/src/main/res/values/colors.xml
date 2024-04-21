@@ -10,6 +10,6 @@
     <color name="Subheading">#546E7A</color>
     <color name="Button">#4CAF50</color>
     <color name="Highlight">#FFEB3B</color>
-    <color name="Border">#78909C</color>
+    <color name="ScrollBackground">#8D78909C</color>
 
 </resources>
