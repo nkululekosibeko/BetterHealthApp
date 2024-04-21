@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -18,24 +17,12 @@
         <activity
             android:name=".Common_Info_SignUP_Activity"
             android:exported="false" />
-        <activity
-            android:name=".admin.Admin_Dashboard_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".doctor.Doctor_Dashboard_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".paramedic.Paramedic_Dashboard_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".student.Student_Dashboard_Activity"
-            android:exported="false" />
+        <!-- MainActivity should not be exported -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
