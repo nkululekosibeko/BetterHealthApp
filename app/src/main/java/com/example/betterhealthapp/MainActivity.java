@@ -40,6 +40,5 @@ public class MainActivity extends AppCompatActivity {
             Intent signUpIntent = new Intent(MainActivity.this, Common_Info_SignUP_Activity.class);
             startActivity(signUpIntent);
         });
-
     }
 }
