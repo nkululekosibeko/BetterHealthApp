@@ -17,7 +17,8 @@
     </string>
     <string name="welcome_text_Three.4">
         🐣   Your health, simplified
-    </string><string name="welcomeB_text">
+    </string>
+    <string name="welcomeB_text">
         Welcome Back !!!
     </string>
     <string name="Sign_In_Btn">
@@ -31,6 +32,26 @@
     </string>
     <string name="Sign_Up_DOB_btn">
         Date of Birth
+    </string>
+    <string name="User_Type_Pick">
+        Choose your role 💠,
+    </string>
+    <string name="User_Type_Pick_Instr">
+        This is where you pick \nYour role with us.
+    </string>
+
+
+    <string name="Admin_Str">
+        Admin
+    </string>
+    <string name="Student_Str">
+        Student
+    </string>
+    <string name="Doctor_Str">
+        Doctor
+    </string>
+    <string name="Paramedic_Str">
+        Paramedic
     </string>
 
     <string name="Sign_up_Common_Welcome">

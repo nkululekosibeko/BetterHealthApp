@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".User_Type_Picker_Activity">
+
+    <TextView
+        android:id="@+id/User_Pick_Sign_Up_instr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/User_Type_Pick_Instr"
+        android:textSize="25dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/User_Pick_Sign_Up" />
+
+    <TextView
+        android:id="@+id/User_Pick_Sign_Up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/User_Type_Pick"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Application_Logo" />
+
+    <Button
+        android:id="@+id/Sign_Up_User_Pick_Admin"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/Admin_Str"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sign_Up_User_Pick_Student" />
+
+    <Button
+        android:id="@+id/Sign_Up_User_Pick_Doctor"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/Doctor_Str"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sign_Up_User_Pick_Admin" />
+
+    <Button
+        android:id="@+id/Sign_Up_User_Pick_Paramedic"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/Paramedic_Str"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sign_Up_User_Pick_Doctor"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <Button
+        android:id="@+id/Sign_Up_User_Pick_Student"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/Student_Str"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/User_Pick_Sign_Up_instr" />
+
+    <ImageView
+        android:id="@+id/Application_Logo"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/bg_edtext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Application_Name"
+        app:srcCompat="@drawable/doctor512px" />
+
+    <TextView
+        android:id="@+id/Application_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/app_name"
+        android:textColor="@color/heading"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
