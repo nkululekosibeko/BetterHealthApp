@@ -1,6 +1,8 @@
 package com.example.betterhealthapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +21,16 @@ public class Sign_In_Activity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        // Get references to the sign-in and sign-up buttons
+        Button signInButton = findViewById(R.id.Landing_btn_Sign_In);
+
+        // Set click listeners for the buttons
+        signInButton.setOnClickListener(v -> {
+            // Start Sign-In Activity
+            Intent signInIntent = new Intent(Sign_In_Activity.this, StudentDashboardActivity.class);
+            startActivity(signInIntent);
         });
     }
 }
