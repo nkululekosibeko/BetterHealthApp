@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BetterHealthApp"
         tools:targetApi="31">
         <activity
+            android:name=".StudentDashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".Paramedic_Sign_Up_Activity"
             android:exported="false" />
         <activity

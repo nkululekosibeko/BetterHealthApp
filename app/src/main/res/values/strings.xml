@@ -27,6 +27,10 @@
     <string name="Sign_Up_Btn">
         Sign Up
     </string>
+    <string name="Sign_Out_Btn">
+        Sign Out
+    </string>
+
     <string name="Sign_Up_Next_Btn">
         Next
     </string>
@@ -57,4 +61,38 @@
     <string name="Sign_up_Common_Welcome">
         Welcome New User
     </string>
+
+    <string name="Dashboard_EditProfile">
+        Edit Profile
+    </string>
+    <string name="Dashboard_Notification">
+        🔔
+    </string>
+    <string name="Dashboard_hi">
+        Hi 👋
+    </string>
+    <string name="Student_Dashboard_NameCall">
+        Nkululeko Sibeko
+    </string>
+
+
+    <string name="STD_Appointment">
+        Schedule Appointment
+    </string>
+    <string name="STD_Symptoms">
+        Symptoms Checker
+    </string>
+    <string name="STD_Articles">
+        Articles and FAQs
+    </string>
+    <string name="STD_Emergency">
+        Emergency
+    </string>
+    <string name="STD_HealthTips">
+        Health Tips
+    </string>
+    <string name="STD_Chat">
+        Chat
+    </string>
+
 </resources>
