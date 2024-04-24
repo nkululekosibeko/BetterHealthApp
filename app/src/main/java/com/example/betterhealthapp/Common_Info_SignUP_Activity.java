@@ -34,40 +34,23 @@ public class Common_Info_SignUP_Activity extends AppCompatActivity {
 
             myDb = new Database_Helper(this);
 
-            fName_Sign_Up_TextEdit = (EditText) findViewById(R.id.fName_Sign_Up_TextEdit);
-            mName_Sign_Up_TextEdit = (EditText) findViewById(R.id.mName_Sign_Up_TextEdit);
-            lName_Sign_Up_TextEdit = (EditText) findViewById(R.id.lName_Sign_Up_TextEdit);
-            DOB_Sign_Up_TextEdit = (EditText) findViewById(R.id.DOB_Sign_Up_TextEdit);
-            IDNum_Sign_Up_TextEdit = (EditText) findViewById(R.id.IDNum_Sign_Up_TextEdit);
-            Gender_Sign_Up_TextEdit = (EditText) findViewById(R.id.Gender_Sign_Up_TextEdit);
-            ContactNum_Sign_Up_TextEdit = (EditText) findViewById(R.id.ContactNum_Sign_Up_TextEdit);
-            email_Sign_Up_TextEdit = (EditText) findViewById(R.id.email_Sign_Up_TextEdit);
-            password_Sign_Up_TextEdit = (EditText) findViewById(R.id.password_Sign_Up_TextEdit);
+            fName_Sign_Up_TextEdit = findViewById(R.id.fName_Sign_Up_TextEdit);
+            mName_Sign_Up_TextEdit = findViewById(R.id.mName_Sign_Up_TextEdit);
+            lName_Sign_Up_TextEdit = findViewById(R.id.lName_Sign_Up_TextEdit);
+            DOB_Sign_Up_TextEdit = findViewById(R.id.DOB_Sign_Up_TextEdit);
+            IDNum_Sign_Up_TextEdit = findViewById(R.id.IDNum_Sign_Up_TextEdit);
+            Gender_Sign_Up_TextEdit = findViewById(R.id.Gender_Sign_Up_TextEdit);
+            ContactNum_Sign_Up_TextEdit = findViewById(R.id.ContactNum_Sign_Up_TextEdit);
+            email_Sign_Up_TextEdit = findViewById(R.id.email_Sign_Up_TextEdit);
+            password_Sign_Up_TextEdit = findViewById(R.id.password_Sign_Up_TextEdit);
 
-            Next_btn_Sign_Up = (Button) findViewById(R.id.Next_btn_Sign_Up);
-            AddData();
+            Next_btn_Sign_Up = findViewById(R.id.Next_btn_Sign_Up);
 
             return insets;
         });
 
-        public void AddData() {
-            Next_btn_Sign_Up.setOnClickListener(
-                    new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            boolean isInserted = myDb.insertData(fName_Sign_Up_TextEdit.getText().toString(), mName_Sign_Up_TextEdit.getText().toString(),
-                                    lName_Sign_Up_TextEdit.getText().toString(),DOB_Sign_Up_TextEdit.getText().toString(),
-                                    IDNum_Sign_Up_TextEdit.getText().toString(),Gender_Sign_Up_TextEdit.getText().toString(),
-                                    ContactNum_Sign_Up_TextEdit.getText().toString(),email_Sign_Up_TextEdit.getText().toString(),
-                                    password_Sign_Up_TextEdit.getText().toString());
-                            if (isInserted == true)
-                                Toast.makeText(Common_Info_SignUP_Activity.this, "First phase of registering successful", Toast.LENGTH_SHORT).show();
-                            else
-                                Toast.makeText(Common_Info_SignUP_Activity.this, "First Phase of Registering Unsuccessful", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-            );
-        }
+        // Set click listener for the Next button
+        Next_btn_Sign_Up.setOnClickListener(v -> AddData());
 
         // Get references to the sign-in and sign-up buttons
         Button signUpNextButton = findViewById(R.id.Next_btn_Sign_Up);
@@ -79,5 +62,20 @@ public class Common_Info_SignUP_Activity extends AppCompatActivity {
             startActivity(signUpNextIntent);
         });
     }
-}
 
+    public void AddData() {
+        boolean isInserted = myDb.insertData(fName_Sign_Up_TextEdit.getText().toString(),
+                mName_Sign_Up_TextEdit.getText().toString(),
+                lName_Sign_Up_TextEdit.getText().toString(),
+                DOB_Sign_Up_TextEdit.getText().toString(),
+                IDNum_Sign_Up_TextEdit.getText().toString(),
+                Gender_Sign_Up_TextEdit.getText().toString(),
+                ContactNum_Sign_Up_TextEdit.getText().toString(),
+                email_Sign_Up_TextEdit.getText().toString(),
+                password_Sign_Up_TextEdit.getText().toString());
+        if (isInserted)
+            Toast.makeText(Common_Info_SignUP_Activity.this, "First phase of registering successful", Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(Common_Info_SignUP_Activity.this, "First Phase of Registering Unsuccessful", Toast.LENGTH_SHORT).show();
+    }
+}
