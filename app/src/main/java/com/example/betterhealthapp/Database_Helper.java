@@ -17,7 +17,8 @@ public class Database_Helper extends SQLiteOpenHelper {
     public static final String COL_6 = "Identity_No";
     public static final String COL_7 = "Gender";
     public static final String COL_8 = "Contact_No";
-    public static final String COL_9 = "Password";
+    public static final String COL_9 = "Email";
+    public static final String COL_10 = "Password";
 
     public Database_Helper(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -34,7 +35,8 @@ public class Database_Helper extends SQLiteOpenHelper {
                 COL_6 + " TEXT, " +
                 COL_7 + " TEXT, " +
                 COL_8 + " TEXT, " +
-                COL_9 + " TEXT)";
+                COL_9 + " TEXT," +
+                COL_10 + "TEXT)";
         db.execSQL(createTableQuery);
     }
 
@@ -45,7 +47,7 @@ public class Database_Helper extends SQLiteOpenHelper {
     }
 
     public boolean insertData(String First_Name, String Middle_Name, String Last_Name, String Date_Of_Birth,
-                              String Identity_No, String Gender, String Contact_No, String Password) {
+                              String Identity_No, String Gender, String Contact_No,String Email, String Password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2, First_Name);
@@ -55,7 +57,8 @@ public class Database_Helper extends SQLiteOpenHelper {
         contentValues.put(COL_6, Identity_No);
         contentValues.put(COL_7, Gender);
         contentValues.put(COL_8, Contact_No);
-        contentValues.put(COL_9, Password);
+        contentValues.put(COL_9, Email);
+        contentValues.put(COL_10, Password);
         long results = db.insert(TABLE_NAME,null,contentValues);
         if (results == -1)
             return false;

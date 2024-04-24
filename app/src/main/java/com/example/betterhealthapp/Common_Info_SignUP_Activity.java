@@ -2,7 +2,6 @@ package com.example.betterhealthapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -64,7 +63,8 @@ public class Common_Info_SignUP_Activity extends AppCompatActivity {
     }
 
     public void AddData() {
-        boolean isInserted = myDb.insertData(fName_Sign_Up_TextEdit.getText().toString(),
+        boolean isInserted = myDb.insertData(
+                fName_Sign_Up_TextEdit.getText().toString(),
                 mName_Sign_Up_TextEdit.getText().toString(),
                 lName_Sign_Up_TextEdit.getText().toString(),
                 DOB_Sign_Up_TextEdit.getText().toString(),
@@ -74,8 +74,8 @@ public class Common_Info_SignUP_Activity extends AppCompatActivity {
                 email_Sign_Up_TextEdit.getText().toString(),
                 password_Sign_Up_TextEdit.getText().toString());
         if (isInserted)
-            Toast.makeText(Common_Info_SignUP_Activity.this, "First phase of registering successful", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Common_Info_SignUP_Activity.this, "Data Capture Successful", Toast.LENGTH_SHORT).show();
         else
-            Toast.makeText(Common_Info_SignUP_Activity.this, "First Phase of Registering Unsuccessful", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Common_Info_SignUP_Activity.this, "Data Capture Unsuccessful", Toast.LENGTH_SHORT).show();
     }
 }
