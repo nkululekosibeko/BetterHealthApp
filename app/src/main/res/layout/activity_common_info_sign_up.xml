@@ -115,19 +115,26 @@
                 android:hint="Last Name"
                 android:textAlignment="center"/>
 
-            <Button
-                android:id="@+id/DOB_btn_Sign_Up"
-                android:layout_width="225dp"
-                android:layout_height="55dp"
+            <EditText
+                android:id="@+id/DOB_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="@string/Sign_Up_DOB_btn"
-                android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:ems="10"
+                android:background="@drawable/bg_edtext"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:paddingLeft="35dp"
+                android:inputType="text"
+                android:hint="Date Of Birth (YYYYMMDD)"
+                android:textAlignment="center"/>
+
 
             <EditText
-                android:id="@+id/ID.No_Sign_Up_TextEdit"
+                android:id="@+id/IDNum_Sign_Up_TextEdit"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
@@ -143,38 +150,28 @@
                 android:hint="Identity Number"
                 android:textAlignment="center"/>
 
-            <!-- Gender -->
-            <RadioGroup
-                android:id="@+id/gender_RadioG_Sign_UP"
-                android:layout_width="351dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/M_gender_RadioG_Sign_UP"
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="75dp"
-                    android:text="Male" />
-
-                <RadioButton
-                    android:id="@+id/F_gender_RadioG_Sign_UP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="50dp"
-                    android:text="Female" />
-
-            </RadioGroup>
 
             <EditText
-                android:id="@+id/Contact.No_Sign_Up_TextEdit"
+                android:id="@+id/Gender_Sign_Up_TextEdit"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:background="@drawable/bg_edtext"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:paddingLeft="35dp"
+                android:inputType="text"
+                android:hint="Gender (M Or F)"
+                android:textAlignment="center"/>
+
+
+
+            <EditText
+                android:id="@+id/ContactNum_Sign_Up_TextEdit"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"

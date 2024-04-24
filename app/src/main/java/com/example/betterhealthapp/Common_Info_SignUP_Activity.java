@@ -2,7 +2,10 @@ package com.example.betterhealthapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +15,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Common_Info_SignUP_Activity extends AppCompatActivity {
 
+    Database_Helper myDb;
+
+    EditText fName_Sign_Up_TextEdit, mName_Sign_Up_TextEdit, lName_Sign_Up_TextEdit,
+            DOB_Sign_Up_TextEdit, IDNum_Sign_Up_TextEdit, Gender_Sign_Up_TextEdit,
+            ContactNum_Sign_Up_TextEdit, email_Sign_Up_TextEdit, password_Sign_Up_TextEdit;
+
+    Button Next_btn_Sign_Up;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,8 +31,43 @@ public class Common_Info_SignUP_Activity extends AppCompatActivity {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+
+            myDb = new Database_Helper(this);
+
+            fName_Sign_Up_TextEdit = (EditText) findViewById(R.id.fName_Sign_Up_TextEdit);
+            mName_Sign_Up_TextEdit = (EditText) findViewById(R.id.mName_Sign_Up_TextEdit);
+            lName_Sign_Up_TextEdit = (EditText) findViewById(R.id.lName_Sign_Up_TextEdit);
+            DOB_Sign_Up_TextEdit = (EditText) findViewById(R.id.DOB_Sign_Up_TextEdit);
+            IDNum_Sign_Up_TextEdit = (EditText) findViewById(R.id.IDNum_Sign_Up_TextEdit);
+            Gender_Sign_Up_TextEdit = (EditText) findViewById(R.id.Gender_Sign_Up_TextEdit);
+            ContactNum_Sign_Up_TextEdit = (EditText) findViewById(R.id.ContactNum_Sign_Up_TextEdit);
+            email_Sign_Up_TextEdit = (EditText) findViewById(R.id.email_Sign_Up_TextEdit);
+            password_Sign_Up_TextEdit = (EditText) findViewById(R.id.password_Sign_Up_TextEdit);
+
+            Next_btn_Sign_Up = (Button) findViewById(R.id.Next_btn_Sign_Up);
+            AddData();
+
             return insets;
         });
+
+        public void AddData() {
+            Next_btn_Sign_Up.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            boolean isInserted = myDb.insertData(fName_Sign_Up_TextEdit.getText().toString(), mName_Sign_Up_TextEdit.getText().toString(),
+                                    lName_Sign_Up_TextEdit.getText().toString(),DOB_Sign_Up_TextEdit.getText().toString(),
+                                    IDNum_Sign_Up_TextEdit.getText().toString(),Gender_Sign_Up_TextEdit.getText().toString(),
+                                    ContactNum_Sign_Up_TextEdit.getText().toString(),email_Sign_Up_TextEdit.getText().toString(),
+                                    password_Sign_Up_TextEdit.getText().toString());
+                            if (isInserted == true)
+                                Toast.makeText(Common_Info_SignUP_Activity.this, "First phase of registering successful", Toast.LENGTH_SHORT).show();
+                            else
+                                Toast.makeText(Common_Info_SignUP_Activity.this, "First Phase of Registering Unsuccessful", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+            );
+        }
 
         // Get references to the sign-in and sign-up buttons
         Button signUpNextButton = findViewById(R.id.Next_btn_Sign_Up);
@@ -34,3 +80,4 @@ public class Common_Info_SignUP_Activity extends AppCompatActivity {
         });
     }
 }
+
