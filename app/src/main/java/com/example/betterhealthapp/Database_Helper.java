@@ -28,17 +28,18 @@ public class Database_Helper extends SQLiteOpenHelper {
     public static final String STUDENT_COL_3 = "Program_Major";
     public static final String STUDENT_COL_4 = "Level_Of_Study";
     public static final String STUDENT_COL_5 = "Faculty";
-    public static final String STUDENT_COL_6 = "Relationship";
-    public static final String STUDENT_COL_7 = "Full_Names";
-    public static final String STUDENT_COL_8 = "EM_Contact_No";
-    public static final String STUDENT_COL_9 = "Allergies";
-    public static final String STUDENT_COL_10 = "Medications";
-    public static final String STUDENT_COL_11 = "Insurance_Provider_Name";
-    public static final String STUDENT_COL_12 = "Policy_Number";
-    public static final String STUDENT_COL_13 = "Coverage_Details";
-    public static final String STUDENT_COL_14 = "Residence_Name";
-    public static final String STUDENT_COL_15 = "Address";
-    public static final String STUDENT_COL_16 = "Room_No";
+    public static final String STUDENT_COL_6 = "Department";
+    public static final String STUDENT_COL_7 = "Relationship";
+    public static final String STUDENT_COL_8 = "Full_Names";
+    public static final String STUDENT_COL_9 = "EM_Contact_No";
+    public static final String STUDENT_COL_10 = "Allergies";
+    public static final String STUDENT_COL_11 = "Medications";
+    public static final String STUDENT_COL_12 = "Insurance_Provider_Name";
+    public static final String STUDENT_COL_13 = "Policy_Number";
+    public static final String STUDENT_COL_14 = "Coverage_Details";
+    public static final String STUDENT_COL_15 = "Residence_Name";
+    public static final String STUDENT_COL_16 = "Address";
+    public static final String STUDENT_COL_17 = "Room_No";
 
     // Foreign key column
     public static final String FOREIGN_KEY_COL = "Common_Info_ID";
@@ -81,6 +82,7 @@ public class Database_Helper extends SQLiteOpenHelper {
                 STUDENT_COL_14 + " TEXT, " +
                 STUDENT_COL_15 + " TEXT, " +
                 STUDENT_COL_16 + " TEXT, " +
+                STUDENT_COL_17 + " TEXT, " +
                 FOREIGN_KEY_COL + " INTEGER, " +
                 "FOREIGN KEY (" + FOREIGN_KEY_COL + ") REFERENCES " + TABLE_NAME + "(" + COL_1 + "))";
         db.execSQL(createStudentTableQuery);
@@ -96,10 +98,16 @@ public class Database_Helper extends SQLiteOpenHelper {
 
     public boolean insertData(String First_Name, String Middle_Name, String Last_Name, String Date_Of_Birth,
                               String Identity_No, String Gender, String Contact_No, String Email, String Password,
-                              String Student_No, String Program_Major, String Level_Of_Study, String Faculty,
-                              String Relationship, String Full_Names, String EM_Contact_No, String Allergies,
-                              String Medications, String Insurance_Provider_Name, String Policy_Number,
-                              String Coverage_Details, String Residence_Name, String Address, String Room_No) {
+
+                              String Student_No, String Program_Major, String Level_Of_Study, String Faculty, String Department,
+
+                              String Relationship, String Full_Names, String EM_Contact_No,
+
+                              String Allergies, String Medications,
+
+                              String Insurance_Provider_Name, String Policy_Number, String Coverage_Details,
+
+                              String Residence_Name, String Address, String Room_No) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.beginTransaction();
         try {
@@ -122,17 +130,18 @@ public class Database_Helper extends SQLiteOpenHelper {
             studentValues.put(STUDENT_COL_3, Program_Major);
             studentValues.put(STUDENT_COL_4, Level_Of_Study);
             studentValues.put(STUDENT_COL_5, Faculty);
-            studentValues.put(STUDENT_COL_6, Relationship);
-            studentValues.put(STUDENT_COL_7, Full_Names);
-            studentValues.put(STUDENT_COL_8, EM_Contact_No);
-            studentValues.put(STUDENT_COL_9, Allergies);
-            studentValues.put(STUDENT_COL_10, Medications);
-            studentValues.put(STUDENT_COL_11, Insurance_Provider_Name);
-            studentValues.put(STUDENT_COL_12, Policy_Number);
-            studentValues.put(STUDENT_COL_13, Coverage_Details);
-            studentValues.put(STUDENT_COL_14, Residence_Name);
-            studentValues.put(STUDENT_COL_15, Address);
-            studentValues.put(STUDENT_COL_16, Room_No);
+            studentValues.put(STUDENT_COL_6, Department);
+            studentValues.put(STUDENT_COL_7, Relationship);
+            studentValues.put(STUDENT_COL_8, Full_Names);
+            studentValues.put(STUDENT_COL_9, EM_Contact_No);
+            studentValues.put(STUDENT_COL_10, Allergies);
+            studentValues.put(STUDENT_COL_11, Medications);
+            studentValues.put(STUDENT_COL_12, Insurance_Provider_Name);
+            studentValues.put(STUDENT_COL_13, Policy_Number);
+            studentValues.put(STUDENT_COL_14, Coverage_Details);
+            studentValues.put(STUDENT_COL_15, Residence_Name);
+            studentValues.put(STUDENT_COL_16, Address);
+            studentValues.put(STUDENT_COL_17, Room_No);
             studentValues.put(FOREIGN_KEY_COL, commonInfoResult); // Set foreign key value
             long studentResult = db.insert(TABLE_NAME1, null, studentValues);
 
