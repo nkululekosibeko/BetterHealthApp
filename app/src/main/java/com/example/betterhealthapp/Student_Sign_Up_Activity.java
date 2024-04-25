@@ -62,6 +62,10 @@ public class Student_Sign_Up_Activity extends AppCompatActivity {
             std_btn_Sign_Up.setOnClickListener(v1 -> {
                 // Add data to database
                 AddData();
+
+                // Start Sign In  Activity for the Student
+                Intent stdsignInIntent = new Intent(Student_Sign_Up_Activity.this, Sign_In_Activity.class);
+                startActivity(stdsignInIntent);
             });
 
             return insets;

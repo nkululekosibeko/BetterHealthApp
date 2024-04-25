@@ -49,6 +49,10 @@ public class Common_Info_SignUP_Activity extends AppCompatActivity {
             Next_btn_Sign_Up.setOnClickListener(v1 -> {
                 // Add data to database
                 AddData();
+
+                // Start User Type Activity
+                Intent signUPNextIntent = new Intent(Common_Info_SignUP_Activity.this, User_Type_Picker_Activity.class);
+                startActivity(signUPNextIntent);
             });
 
             return insets;
