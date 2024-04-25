@@ -58,42 +58,40 @@ public class Student_Sign_Up_Activity extends AppCompatActivity {
 
             std_btn_Sign_Up = findViewById(R.id.std_btn_Sign_Up);
 
+            // Set click listener for the button
+            std_btn_Sign_Up.setOnClickListener(v1 -> {
+                // Add data to database
+                AddData();
+            });
+
             return insets;
-        });
-
-        // Get references to the sign-in and sign-up buttons
-        Button std_btn_Sign_Up = findViewById(R.id.std_btn_Sign_Up);
-
-        // Set click listeners for the buttons
-        std_btn_Sign_Up.setOnClickListener(v -> {
-            // Add data to database
-            AddData();
-
-            // Start Sign-In Activity
-            Intent stdsignUpIntent = new Intent(Student_Sign_Up_Activity.this, Sign_In_Activity.class);
-            startActivity(stdsignUpIntent);
         });
     }
 
     public void AddData() {
         boolean isInserted = myDb.insertData(
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
                 studentNo_Sign_Up_TextEdit.getText().toString(),
                 program_Major_Sign_Up_TextEdit.getText().toString(),
                 LevelOfStudy_Sign_Up_TextEdit.getText().toString(),
                 faculty_Sign_Up_TextEdit.getText().toString(),
                 department_Sign_Up_TextEdit.getText().toString(),
-
                 emergencyRelationship_Sign_Up_TextEdit.getText().toString(),
                 emergencyFllNames_Sign_Up_TextEdit.getText().toString(),
                 emergencyContact_Sign_Up_TextEdit.getText().toString(),
-
                 allergies_Sign_Up_TextEdit.getText().toString(),
                 Medication_Sign_Up_TextEdit.getText().toString(),
-
                 InsuaranceProviderName_Sign_Up_TextEdit.getText().toString(),
                 PolicyNumber_Sign_Up_TextEdit.getText().toString(),
                 CovarageDetails_Sign_Up_TextEdit.getText().toString(),
-
                 RessName_Sign_Up_TextEdit.getText().toString(),
                 Address_Sign_Up_TextEdit.getText().toString(),
                 RoomNumber_Sign_Up_TextEdit.getText().toString());

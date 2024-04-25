@@ -17,7 +17,7 @@ public class Common_Info_SignUP_Activity extends AppCompatActivity {
     Database_Helper myDb;
 
     EditText fName_Sign_Up_TextEdit, mName_Sign_Up_TextEdit, lName_Sign_Up_TextEdit,
-            DOB_Sign_Up_TextEdit, IDNum_Sign_Up_TextEdit, Gender_Sign_Up_TextEdit,
+            DOB_Sign_Up_TextEdit, IDNum_Sign_Up_TextEdit, Gender_Sign_Up_TextEdit, studentNo_Sign_Up_TextEdit,
             ContactNum_Sign_Up_TextEdit, email_Sign_Up_TextEdit, password_Sign_Up_TextEdit;
 
     Button Next_btn_Sign_Up;
@@ -49,10 +49,6 @@ public class Common_Info_SignUP_Activity extends AppCompatActivity {
             Next_btn_Sign_Up.setOnClickListener(v1 -> {
                 // Add data to database
                 AddData();
-
-                // Start User_Picker Activity
-                Intent signUpNextIntent = new Intent(Common_Info_SignUP_Activity.this, User_Type_Picker_Activity.class);
-                startActivity(signUpNextIntent);
             });
 
             return insets;
@@ -70,8 +66,23 @@ public class Common_Info_SignUP_Activity extends AppCompatActivity {
                 Gender_Sign_Up_TextEdit.getText().toString(),
                 ContactNum_Sign_Up_TextEdit.getText().toString(),
                 email_Sign_Up_TextEdit.getText().toString(),
-                password_Sign_Up_TextEdit.getText().toString());
-
+                password_Sign_Up_TextEdit.getText().toString(),
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "");
 
         if (isInserted)
             Toast.makeText(Common_Info_SignUP_Activity.this, "Data Capture Successful", Toast.LENGTH_SHORT).show();
