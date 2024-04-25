@@ -24,4 +24,14 @@
     <string name="Sign_Up_Btn">
         Sign Up
     </string>
+    <string name="chat">Chat</string>
+    <string name="health_tips">Health Tips</string>
+    <string name="emergency_attendance">Emergency Attendance</string>
+    <string name="patient_log">Patient Logs</string>
+    <string name="doctor_name">Dr. John Doe</string>
+    <string name="specialization">Cardiologist</string>
+    <string name="articles_faqs">View Articles</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="consultation_notes">Consultation Notes</string>
+    <string name="sign_out">Sign Out</string>
 </resources>
