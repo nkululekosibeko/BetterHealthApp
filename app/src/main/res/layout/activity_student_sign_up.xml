@@ -9,12 +9,12 @@
     tools:context=".Student_Sign_Up_Activity">
 
     <Button
-        android:id="@+id/std_btn_Sign_In"
+        android:id="@+id/std_btn_Sign_Up"
         android:layout_width="225dp"
         android:layout_height="55dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/bg_btn"
-        android:text="@string/Sign_In_Btn"
+        android:text="@string/Sign_Up_Btn"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,7 +113,7 @@
                 android:textAlignment="center"/>
 
             <EditText
-                android:id="@+id/year_Of_Study_Sign_Up_TextEdit"
+                android:id="@+id/LevelOfStudy_Sign_Up_TextEdit"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"

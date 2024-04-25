@@ -71,9 +71,12 @@ public class Common_Info_SignUP_Activity extends AppCompatActivity {
                 ContactNum_Sign_Up_TextEdit.getText().toString(),
                 email_Sign_Up_TextEdit.getText().toString(),
                 password_Sign_Up_TextEdit.getText().toString());
+
+
         if (isInserted)
             Toast.makeText(Common_Info_SignUP_Activity.this, "Data Capture Successful", Toast.LENGTH_SHORT).show();
         else
             Toast.makeText(Common_Info_SignUP_Activity.this, "Data Capture Unsuccessful", Toast.LENGTH_SHORT).show();
     }
+
 }
